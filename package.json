@@ -1,0 +1,24 @@
+{
+  "name": "ratsit_name_search",
+  "version": "1.0.0",
+  "description": "Search Ratsit for names",
+  "main": "index.js",
+  "scripts": {
+    "test": "find ./ -name '*.test.js' | xargs mocha -R spec"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "babyparse": "^0.4.6",
+    "chai": "^4.1.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "jquery-param": "^0.2.0",
+    "json2csv": "^3.7.3",
+    "lodash": "^4.17.4",
+    "mocha": "^4.0.1",
+    "moment": "^2.17.1",
+    "x2js": "^3.1.0"
+  }
+}
