@@ -13,8 +13,13 @@ async function FindPersonsWithLastnameInArea(name, area) {
   let hitcount_larger_than_100 = true;
   while (hitcount_larger_than_100) {
     try {
-      const search_result = await RatsitSearch(name, area, age_to);
-      if (search_result.PersonSearchResult.HitCount > 100) {
+      const response = await RatsitSearch(name, area, age_to);
+      const search_result = response.Envelope.Body.SearchPersonCriteriaResponse;
+      console.log(
+        "Hitcount (" + name + "): ",
+        search_result.PersonSearchResult.HitCount
+      );
+      if (parseInt(search_result.PersonSearchResult.HitCount) > 100) {
         age_to = moment().diff(
           search_result.PersonSearchResult.Hits.PersonSearchHit[99].BirthDate,
           "years"

@@ -1,6 +1,6 @@
 function PersonHasLastname(person, name) {
-  return person.LastName
-    .split(" ")
+  person.LastName = person.LastName + "";
+  return person.LastName.split(" ")
     .map(lastname => lastname.toUpperCase())
     .includes(name.toUpperCase());
 }
